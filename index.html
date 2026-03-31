@@ -151,6 +151,24 @@ body {
         padding: 0.75rem !important;
     }
 }
+        /* MOBILE VIEW BOTTOM CROPPING FIX */
+@media (max-width: 768px) {
+    /* 1. Add significant padding at the bottom of the scroll container */
+    .main-scroll {
+        padding-bottom: 160px !important; 
+    }
+    
+    /* 2. Fix the height calculation to prevent browser UI from clipping content */
+    .flex.h-screen {
+        height: auto !important;
+        min-height: 100vh;
+    }
+    
+    /* 3. Allow the body to handle overflow if the inner container is restricted */
+    body {
+        overflow-y: auto !important;
+    }
+}
    </style>
 </head>
 <body class="antialiased">
