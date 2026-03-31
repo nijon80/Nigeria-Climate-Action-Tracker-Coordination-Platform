@@ -169,6 +169,24 @@ body {
         overflow-y: auto !important;
     }
 }
+        /* --- ASH TO WHITE FONT COLOR FIX --- */
+
+/* 1. Force Ash variables to White in Dark Mode (Default) */
+:root {
+    --apri-ash: #ffffff !important;
+    --text-dim: #ffffff !important;
+}
+
+/* 2. Restore original Ash/Dim colors for Light Mode only */
+.light-mode {
+    --apri-ash: #999179 !important;
+    --text-dim: #444444 !important;
+}
+
+/* 3. Ensure the classes used in Governance and other sections update correctly */
+.text-ash-bold, .text-ash-500 {
+    color: var(--apri-ash) !important;
+}
    </style>
 </head>
 <body class="antialiased">
