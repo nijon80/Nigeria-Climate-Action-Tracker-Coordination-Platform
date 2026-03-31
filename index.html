@@ -24,13 +24,38 @@
             --text-dim: #444444; --border: rgba(153, 145, 121, 0.25); --sidebar: #ffffff;
         }
 
-        body { 
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 600;
-            background-color: var(--bg-color); color: var(--text-dim);
-            font-size: 0.86rem; font-weight: 600; overflow: hidden; 
-            transition: background 0.3s ease;
-        }
+/* RESPONSIVE TYPOGRAPHY SYSTEM */
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    background-color: var(--bg-color); 
+    color: var(--text-dim);
+    overflow: hidden; 
+    transition: background 0.3s ease;
+    
+    /* Perfect Font Size for Mobile (Default) */
+    font-size: 0.78rem; 
+}
+
+/* Perfect Font Size for Tablets */
+@media (min-width: 768px) {
+    body { font-size: 0.82rem; }
+}
+
+/* Perfect Font Size for Desktops (Your Original Size) */
+@media (min-width: 1024px) {
+    body { font-size: 0.86rem; }
+}
+
+/* HEADING SCALING: Ensures large titles don't overpower mobile screens */
+@media (max-width: 768px) {
+    h1 { font-size: 1.4rem !important; } /* Dashboard Titles */
+    h2 { font-size: 1.1rem !important; } /* Section Titles */
+    h3 { font-size: 1.0rem !important; } /* Card Titles */
+    .text-3xl { font-size: 1.75rem !important; } /* Large Numbers like 184.9 */
+    .text-5xl { font-size: 2.5rem !important; }  /* Mega numbers like 98% */
+    .text-6xl { font-size: 3rem !important; }    /* Valuation numbers */
+}
 
         h1,h2,h3,h4,h5{
             font-weight:900;
