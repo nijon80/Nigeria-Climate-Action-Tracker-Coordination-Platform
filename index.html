@@ -128,7 +128,29 @@ body {
 .light-mode .logo-img {
     filter: none !important;
 }
+/* SECTOR TABLES MOBILE OVERFLOW FIX */
+@media (max-width: 768px) {
+    /* Force the table to stay within the width of the card */
+    .neuro-card .inspired-table {
+        table-layout: fixed !important;
+        width: 100% !important;
+    }
 
+    /* Force text to wrap to new lines and reduce padding */
+    .neuro-card .inspired-table th, 
+    .neuro-card .inspired-table td {
+        font-size: 10px !important;
+        padding: 8px 4px !important;
+        white-space: normal !important; /* This ensures text wraps inside the box */
+        word-break: break-word !important;
+        vertical-align: top;
+    }
+
+    /* Adjust the card padding slightly for more space */
+    .neuro-card.p-4 {
+        padding: 0.75rem !important;
+    }
+}
    </style>
 </head>
 <body class="antialiased">
